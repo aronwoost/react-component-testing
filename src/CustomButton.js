@@ -2,14 +2,18 @@ import React from 'react';
 import classnames from 'classnames';
 
 class CustomButton extends React.Component {
-  render() {
-    const props = this.props;
-    const classNames = classnames({
-      active: props.active,
-    });
+  constructor(props) {
+    super(props);
+    this.onClick = this.onClick.bind(this);
+  }
 
+  onClick() {
+    this.props.actions.onButtonClicked(this.props.id);
+  }
+
+  render() {
     return (
-      <button className={classNames}>{props.label}</button>
+      <button onClick={this.onClick}>{this.props.label}</button>
     );
   }
 }

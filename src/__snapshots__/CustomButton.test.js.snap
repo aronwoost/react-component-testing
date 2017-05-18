@@ -1,0 +1,6 @@
+exports[`test renders render 1`] = `
+<button
+  onClick={[Function]}>
+  test-label
+</button>
+`;
