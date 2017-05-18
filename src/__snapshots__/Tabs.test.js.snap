@@ -1,0 +1,11 @@
+exports[`test renders without crashing 1`] = `
+<div
+  className="tabs">
+  <CustomButton
+    active={true}
+    label="Home" />
+  <CustomButton
+    active={false}
+    label="About" />
+</div>
+`;
